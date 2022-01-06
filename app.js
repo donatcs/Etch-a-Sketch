@@ -28,7 +28,6 @@ function containerAdd () {
         }
 }
 
-
 containerAdd ();
 
 const weird = document.querySelectorAll(".weird");
