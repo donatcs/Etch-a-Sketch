@@ -30,13 +30,42 @@ function containerAdd () {
 
 containerAdd ();
 
+
+
+
+
+
 const weird = document.querySelectorAll(".weird");
 
 let changeColor = weird.forEach(weird => {  
-    weird.addEventListener("mouseover", () => {
-        const Color1 = Math.floor(Math.random() * 256);
+
+        /// RANDOM COLOR
+
+    document.getElementById("random").addEventListener("click", random);
+
+    function random() {
+        
+    const Color1 = Math.floor(Math.random() * 256);
     const Color2 = Math.floor(Math.random() * 256);
     const Color3 = Math.floor(Math.random() * 256);
          weird.style.backgroundColor = `rgb(${Color1}, ${Color2}, ${Color3})`;
-    })
+
+
+    }
+
+         /// BLACK
+
+
+         document.getElementById("black").addEventListener("click", black);
+
+         function black() {
+             
+         const Color1 = Math.floor(Math.random() * 1);
+         const Color2 = Math.floor(Math.random() * 1);
+         const Color3 = Math.floor(Math.random() * 1);
+              weird.style.backgroundColor = `rgb(${Color1}, ${Color2}, ${Color3})`;
+
+
+
+    }
 })
