@@ -32,18 +32,15 @@ containerAdd ();
 
 
 
-
-
-
 const weird = document.querySelectorAll(".weird");
 
-let changeColor = weird.forEach(weird => {  
+let changeColorRandom = weird.forEach(weird => {  
 
         /// RANDOM COLOR
 
-    document.getElementById("random").addEventListener("click", random);
+    document.getElementById("rbg").addEventListener("click", () =>
 
-    function random() {
+    weird.onmouseover = function rbg() {
         
     const Color1 = Math.floor(Math.random() * 256);
     const Color2 = Math.floor(Math.random() * 256);
@@ -51,21 +48,21 @@ let changeColor = weird.forEach(weird => {
          weird.style.backgroundColor = `rgb(${Color1}, ${Color2}, ${Color3})`;
 
 
-    }
+    })
+})
+        /// BLACK COLOR 
 
-         /// BLACK
-
-
-         document.getElementById("black").addEventListener("click", black);
-
-         function black() {
-             
-         const Color1 = Math.floor(Math.random() * 1);
-         const Color2 = Math.floor(Math.random() * 1);
-         const Color3 = Math.floor(Math.random() * 1);
-              weird.style.backgroundColor = `rgb(${Color1}, ${Color2}, ${Color3})`;
+let changeColorBlack = weird.forEach(weird => {  
 
 
+document.getElementById("black").addEventListener("click", () =>
 
-    }
+weird.onmouseover = function black() {
+
+    const Color1 = Math.floor(Math.random() * 1);
+    const Color2 = Math.floor(Math.random() * 1);
+    const Color3 = Math.floor(Math.random() * 1);
+    weird.style.backgroundColor = `rgb(${Color1}, ${Color2}, ${Color3})`;
+})
+
 })
