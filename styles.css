@@ -16,6 +16,8 @@ body {
     top: 150px;
     background-color: white;
     cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
     
     
 }
