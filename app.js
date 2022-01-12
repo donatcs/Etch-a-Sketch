@@ -9,7 +9,7 @@ let container = document.getElementById('container');
 
 let ROWS = 16 
 let COLS = 16
-let PIXEL = 30
+let PIXEL = 40
 
 
 
