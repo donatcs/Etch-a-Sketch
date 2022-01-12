@@ -1,7 +1,13 @@
 
+ /// CREATE THE GRID
+
 let container = document.getElementById('container');
 
-let ROWS = 16
+
+
+
+
+let ROWS = 16 
 let COLS = 16
 let PIXEL = 30
 
@@ -14,7 +20,7 @@ function containerAdd () {
                         let pixel = document.createElement('div');
                         pixel.classList.add("weird");
                         pixel.style.position = 'absolute';
-                        pixel.style.border = '1px solid green'
+                        pixel.style.border = '1px solid black'
                         pixel.style.left = j * PIXEL + 'px';
                         pixel.style.top = i * PIXEL + 'px';
                         pixel.style.width = PIXEL  + 'px';
@@ -28,15 +34,18 @@ function containerAdd () {
         }
 }
 
+
 containerAdd ();
 
+
+
+        /// RANDOM COLOR
 
 
 const weird = document.querySelectorAll(".weird");
 
 let changeColorRandom = weird.forEach(weird => {  
 
-        /// RANDOM COLOR
 
     document.getElementById("rbg").addEventListener("click", () =>
 
@@ -49,20 +58,58 @@ let changeColorRandom = weird.forEach(weird => {
 
 
     })
-})
+});
+
+
         /// BLACK COLOR 
+        
+       
+        let changeColorRandomz = weird.forEach(weird => {  
+        document.getElementById("black").addEventListener("click", () =>
+        weird.onmouseover = function black() {
+                            
+                            const Color1 = Math.floor(Math.random() * 1);
+                            const Color2 = Math.floor(Math.random() * 1);
+                            const Color3 = Math.floor(Math.random() * 1);
+                            weird.style.backgroundColor = `rgb(${Color1}, ${Color2}, ${Color3})`;
 
-let changeColorBlack = weird.forEach(weird => {  
+
+                          })
+                   
+                        })
+
+        /// RESET EVERYTHING ///
+        
+const resetButton = document.querySelector("#resetButton")
+        function myFunction() {
+
+            for (i = 0; i < weird.length; i++) {
+                weird[i].style.background = 'white';
+            };
+        };
+                   
+
+        resetButton.addEventListener('click', function() {
+
+            myFunction();
+            container.style.display ="block";
+        });
 
 
-document.getElementById("black").addEventListener("click", () =>
 
-weird.onmouseover = function black() {
 
-    const Color1 = Math.floor(Math.random() * 1);
-    const Color2 = Math.floor(Math.random() * 1);
-    const Color3 = Math.floor(Math.random() * 1);
-    weird.style.backgroundColor = `rgb(${Color1}, ${Color2}, ${Color3})`;
-})
+        /// white
 
-})
+        let changeColorRandomWhite = weird.forEach(weird => {  
+            document.getElementById("white").addEventListener("click", () =>
+            weird.onmouseover = function white() {
+                                
+                                const Color1 = Math.floor(Math.random() * 90000000);
+                                const Color2 = Math.floor(Math.random() * 90000000);
+                                const Color3 = Math.floor(Math.random() * 90000000);
+                                weird.style.backgroundColor = `rgb(${Color1}, ${Color2}, ${Color3})`;
+    
+    
+                              })
+                       
+                            })

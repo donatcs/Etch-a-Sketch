@@ -2,7 +2,7 @@
     width: 480px;
     height: 480px;
     border: 3px solid black;
-    position: relative;
+    position: absolute;
     box-sizing: content-box;
     left: 730px;
     top: 150px;
@@ -21,18 +21,18 @@
 
 #black {
 
-    width: 150px;
+    width: 90px;
     height: 50px;
     border: 3px solid black;
     position: absolute;
-    left: 1000px;
+    left: 900px;
     top: 50px
     
 }
 
 #rbg {
 
-    width: 150px;
+    width: 90px;
     height: 50px;
     border: 3px solid black;
     position: absolute;
@@ -40,3 +40,29 @@
     top: 50px
     
 }
+
+#reset {
+
+    width: 90px;
+    height: 50px;
+    border: 3px solid black;
+    position: absolute;
+    left: 1000px;
+    top: 50px
+
+
+}
+
+
+#resetButton {
+
+    width: 90px;
+    height: 50px;
+    border: 3px solid black;
+    position: absolute;
+    left: 1100px;
+    top: 50px
+
+
+}
+
