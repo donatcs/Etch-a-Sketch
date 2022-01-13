@@ -25,7 +25,8 @@
                          pixel.style.top = i * PIXEL + 'px';
                          pixel.style.width = PIXEL  + 'px';
                          pixel.style.height = PIXEL + 'px';
-                         
+
+                         pixel.style.margin = "auto"
                          container.appendChild(pixel)
                  
                          
